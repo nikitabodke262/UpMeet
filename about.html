@@ -46,19 +46,81 @@
                         <a class="nav-link " href="./about.html" style="color: white;"><b>About </b> </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: white;"><b>Services</b></a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#" style="color: white;"><b>Contact Us</b></a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <button class="btn btn-success mx-3" type="submit">Login</button>
-                    <button class="btn btn-success" type="submit">Signup</button>
+                    <button class="btn btn-success mx-3"data-bs-toggle="modal" data-bs-target="#loginModal" type="button">Login</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal"type="button">Signup</button>
                 </form>
             </div>
         </div>
     </nav>
+
+    <!-- login modal  Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModaLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModal">Login to UpMeet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Signup to UpMeet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jumbotron -->
     <div class="p-5 mb-4 bg-light rounded-3">
@@ -82,10 +144,14 @@
         <div class="row featurette d-flex justify-content-center align-items-center">
             <div class="col-md-7">
                 <h1 class="featurette-heading"><b>Get creative</b></h1>
-                <p class="lead"><h4  style="color:dimgray">Create a podcast, write a screenplay, discuss art, design something, or get feedback on your work</h4></p>
+                <p class="lead">
+                <h4 style="color:dimgray">Create a podcast, write a screenplay, discuss art, design something, or get
+                    feedback on your work</h4>
+                </p>
             </div>
             <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="./creativity.jpg" alt="">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                    src="./creativity.jpg" alt="">
             </div>
         </div>
     </div>
@@ -97,11 +163,15 @@
         <div class="row featurette d-flex justify-content-center align-items-center">
             <div class="col-md-7 order-md-2">
                 <h1 class="featurette-heading"><b>Build your career</h2></b></h1>
-                <p class="lead"><h4  style="color:dimgray">Test a prototype, network, take a class, learn a language, pitch to investors, or learn a new skill</h4></p>
+                <p class="lead">
+                <h4 style="color:dimgray">Test a prototype, network, take a class, learn a language, pitch to investors,
+                    or learn a new skill</h4>
+                </p>
             </div>
             <div class="col-md-5 order-md-1">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="./career.jpg" alt="">
-                  </div>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                    src="./career.jpg" alt="">
+            </div>
         </div>
     </div>
 
@@ -113,10 +183,14 @@
         <div class="row featurette d-flex justify-content-center align-items-center">
             <div class="col-md-7">
                 <h1 class="featurette-heading"><b>Explore your city</h1></b>
-                <p class="lead"><h4  style="color:dimgray">Visit a museum, try new food, go hiking, hit up a brewery tour, or just go meet new people</h4></p>
+                <p class="lead">
+                <h4 style="color:dimgray">Visit a museum, try new food, go hiking, hit up a brewery tour, or just go
+                    meet new people</h4>
+                </p>
             </div>
             <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="city.jpg" alt="">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="city.jpg"
+                    alt="">
             </div>
         </div>
     </div>

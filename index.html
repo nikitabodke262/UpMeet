@@ -19,32 +19,17 @@
     margin-bottom: 30px
   }
 
-  /* 
+  .form {
+    margin: 20px;
+  }
+
   .row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
-    margin-right: calc(var(--bs-gutter-x)/ -2);
-    margin-left: calc(var(--bs-gutter-x)/ -2);
+    margin: 0 8rem;
   }
 
-  *,
-  ::after,
-  ::before {
-    box-sizing: border-box;
+  .row1 {
+    /* margin: 0 1rem; */
   }
-
-  h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-  } */
 </style>
 
 <body>
@@ -64,10 +49,7 @@
             <a class="nav-link " href="./about.html" style="color: white;"><b>About </b> </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color: white;"><b>Services</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color: white;"><b>Contact Us</b></a>
+            <a class="nav-link" href="./contact.html" style="color: white;"><b>Contact Us</b></a>
           </li>
         </ul>
         <form class="d-flex">
@@ -142,6 +124,8 @@
       </div>
     </div>
   </div>
+
+
   <!-- Carousel -->
   <div class="carousel">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -175,7 +159,7 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col">
         <div class="card shadow-sm">
-          <img src="./card1.jpg" alt="" height="279px">
+          <img src="./card1.jpg" alt="" height="220px">
           <div class="card-body">
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
               content. This content is a little bit longer.</p>
@@ -217,8 +201,142 @@
 
   <!-- divider -->
   <hr class="featurette-divider my-5">
+  <h1 class="d-flex justify-content-center align-items-center"><b>What do you want to do?</b></h1>
+
+  <!-- buttons -->
+  <div clas="option my-4">
+    <div class="md:h-auto w-100 flex-wrap lg:max-w-full overflow-x-auto overflow-y-hidden -mx-6 sm:-mx-4 md:mx-0 my-5">
+      <div class="flex flex-wrap lg:justify-between md:justify-start overflow-x-auto overflow-y-hidden dfarcjx">
+        <a class="hover:no-underline p-4 max-h-12 mr-2 last:mr-0 mb-2 s2x9qzh r1yexj96">
+          <a href="www.google.com" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+            aria-disabled="true">Boost your career</a>
+          <a href="www.google.com" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+            aria-disabled="true">Find your zen</a>
+          <a href="www.google.com" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+            aria-disabled="true">Get moving</a>
+          <a href="www.google.com" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+            aria-disabled="true">Share language</a>
+          <a href="www.google.com" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+            aria-disabled="true">Read with friends</a>
+          <a href="www.google.com" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+            aria-disabled="true">Get crafty</a>
+          <a href="www.google.com" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+            aria-disabled="true">Write together</a>
+          <a href="www.google.com" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+            aria-disabled="true">Share culture</a> </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- form -->
+  <div class="form ">
+    <form class="form-inline d-flex justify-content-center">
+      <div class="form-group mr-2 mx-2">
+        <label class="sr-only" for="inputEmail"></label>
+        <input type="text" class="form-control" size="50" id="inputEmail" placeholder='Search for "interest"' required>
+      </div>
+      <div class="form-group mr-2">
+        <label class="sr-only" for="inputPassword"></label>
+        <input type="text" class="form-control" size="50" id="inputPassword" placeholder="Location" required>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- button -->
+  <div class="search d-flex justify-content-center">
+    <a href="www.google.com" class="btn btn-success btn-lg enabled mx-1" style="width: 20%;" tabindex="-1" role="button"
+      aria-disabled="true"> Search </a>
+  </div>
+
+  <!-- divider -->
+  <hr class="featurette-divider my-5">
+  <h1 class="d-flex justify-content-center align-items-center"><b>How UpMeet works?</b></h1>
+  <h6 class="d-flex justify-content-center align-items-center">Meet new people who share your interests
+    through online and in-person events. It’s free to create
+    an account.</h6>
 
 
+  <!-- cards  -->
+
+  <div class="container my-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./images (1).png" alt="" height="307px">
+          <div class="card-body">
+            <h5 class="card-title my-3" style="text-align: center;">Join a group</h5>
+            <p class="card-text">Do what you love, meet others who love it,
+              find your community. The rest is history!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./event2.png" alt="">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Find an event</h5>
+            <p class="card-text">Events are happening on just about any topic you can think of,
+              from online gamingto yoga and
+              hiking.</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="./event.png" alt="">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Start a group</h5>
+            <p class="card-text">You don’t have to be an expert
+              to gather people together and explore shared interests.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- divider -->
+  <hr class="featurette-divider my-5">
+  <h1 class="d-flex justify-content-center align-items-center"><b>Popular groups</b></h1>
+
+
+  <!-- popular groups -->
+
+  <div class="container my-5">
+    <div class="row row-cols-sm-2 ">
+      <div class="card" style="max-width: 540px; height: 300px;">
+        <div class="row g-0 mx-5">
+          <div class="col-md-4">
+            <img src="..." alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <p> </p>
+      </div>
+      <div class="card" style="max-width: 540px; height: 300px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="..." alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
