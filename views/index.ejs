@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <title>UpMeet</title>
+  <script src='./index.js' defer>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+
+  </script>
+</head>
+<style>
+  .featurette-divider {
+    margin: 0 5rem;
+    margin-top: 30px;
+    margin-bottom: 30px
+  }
+
+  .form {
+    margin: 20px;
+  }
+
+  .row {
+    margin: 0 8rem;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+  body {
+    /* background: linear-gradient(0deg, #fff, 50%, #DEEEFE); */
+    font-family: 'Rubik', sans-serif;
+    /* background: #cdd6da; */
+    height: 100 !important
+  }
+
+  .container-fluid {
+    overflow: hidden;
+    margin-top: 250px;
+    background: #262626;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom: 0
+  }
+
+  small {
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+  }
+
+  .bold-text {
+    color: #989c9e !important
+  }
+
+  .mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+  }
+
+  h3 {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+  }
+
+  .social {
+    font-size: 21px !important
+  }
+
+  .rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+  }
+</style>
+
+<body>
+  <div class="contain">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <a href="./index.html"> <img src="./Free_Sample_By_Wix.jpg" alt="" width="70px"></a>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html" style="color: white;"> <b>Home</b>
+                <span class="sr-only"></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./about.html" style="color: white;"><b>About </b> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html" style="color: white;"><b>Contact Us</b></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-success mx-3" data-bs-toggle="modal" data-bs-target="#loginModal"
+              type="button">Login</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal"
+              type="button">Signup</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- login modal  Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModaLabel1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModal">Login to UpMeet</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginmodal" novalidate>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" required>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </div>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Signup to UpMeet</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="/bits" method="POST" id="signmodal" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name='name' required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail2" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+                  name='email' required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" name='password' required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword3" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword3" name='confirmpassword' required>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Signup</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Carousel -->
+    <div class="carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://source.unsplash.com/1100x400/?adventure,cycle,robot" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/1100x400/?code,computer" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/1100x400/?art,dance,music" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+
+    <div class="container my-5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="./card1.jpg" alt="" height="220px">
+            <div class="card-body">
+              <h5 class="card-title " style="text-align: center; ">
+                <a href="/views/friends.html" style="color: black;  text-decoration: none"><b> Make new friends</b></a>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="./card2.jpg" alt="">
+            <div class="card-body">
+              <h5 class="card-title " style="text-align: center; ">
+                <a href="/views/outdoors.html" style="color: black;  text-decoration: none"><b> Explore Outdoors</b></a>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="./card3.jpg" alt="">
+            <div class="card-body">
+              <h5 class="card-title " style="text-align: center; ">
+                <a href="/views/connectTech.html" style="color: black;  text-decoration: none"><b> Connect over
+                    tech</b></a>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- divider -->
+    <hr class="featurette-divider my-5">
+    <h1 class="d-flex justify-content-center align-items-center"><b>What do you want to do?</b></h1>
+
+    <!-- buttons -->
+    <div class="option my-4">
+      <div
+        class="md:h-auto w-100 flex-wrap lg:max-w-full overflow-x-auto overflow-y-hidden -mx-6 sm:-mx-4 md:mx-0 my-5">
+        <div class="flex flex-wrap lg:justify-between md:justify-start overflow-x-auto overflow-y-hidden dfarcjx">
+          <a class="hover:no-underline p-4 max-h-12 mr-2 last:mr-0 mb-2 s2x9qzh r1yexj96">
+            <a href="/views/friends.html" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+              aria-disabled="true">Boost your career</a>
+            <a href="/views/friends.html" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+              aria-disabled="true">Find your zen</a>
+            <a href="/views/friends.html" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+              aria-disabled="true">Get moving</a>
+            <a href="/views/friends.html" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+              aria-disabled="true">Share language</a>
+            <a href="/views/friends.html" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+              aria-disabled="true">Read with friends</a>
+            <a href="/views/friends.html" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+              aria-disabled="true">Get crafty</a>
+            <a href="/views/friends.html" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+              aria-disabled="true">Write together</a>
+            <a href="/views/friends.html" class="btn btn-primary btn-lg enabled mx-1" tabindex="-1" role="button"
+              aria-disabled="true">Share culture</a> </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- form -->
+    <div class="form ">
+      <form class="form-inline d-flex justify-content-center" novalidate>
+        <div class="dropdown mx-5">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Choose a Category
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">Arts</button>
+            <button class="dropdown-item" type="button">Adventure</button>
+            <button class="dropdown-item" type="button">Painting</button>
+          </div>
+        </div>
+        <div class="dropdown mx-5">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Choose a Location
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">Pune</button>
+            <button class="dropdown-item" type="button">Delhi</button>
+            <button class="dropdown-item" type="button">Mumbai</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- button -->
+    <div class="search d-flex justify-content-center">
+      <a href="/views/friends.html" class="btn btn-success btn-lg enabled mx-1" style="width: 20%;" tabindex="-1"
+        role="button" aria-disabled="true"> Search </a>
+    </div>
+
+    <!-- divider -->
+    <hr class="featurette-divider my-5">
+    <h1 class="d-flex justify-content-center align-items-center"><b>How UpMeet works?</b></h1>
+    <h6 class="d-flex justify-content-center align-items-center">Meet new people who share your interests
+      through online and in-person events. It’s free to create
+      an account.</h6>
+
+
+    <!-- cards  -->
+
+    <div class="container my-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="./images (1).png" alt="" height="330px">
+            <div class="card-body">
+              <a href="/views/friends.html" style="text-decoration: none;">
+                <h5 class="card-title" style="text-align: center; color: black; "><b>Join a group</b></h5>
+              </a>
+              <p class="card-text">Do what you love, meet others who love it,
+                find your community. The rest is history!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="./event2.png" alt="">
+            <div class="card-body">
+              <a href="friends.html" style="text-decoration: none;">
+                <h5 class="card-title" style="text-align: center; color: black;"><b>Find an event</b></h5>
+              </a>
+              <p class="card-text">Events are happening on just about any topic you can think of,
+                from online gamingto yoga and
+                hiking.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="./event.png" alt="">
+            <div class="card-body">
+              <a href="/views/createGrp.html" style="text-decoration: none;">
+                <h5 class="card-title" style="text-align: center; color: black;"><b>Start a group</b></h5>
+              </a>
+              <p class="card-text">You don’t have to be an expert
+                to gather people together and explore shared interests.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- divider -->
+    <hr class="featurette-divider my-5">
+    <h1 class="d-flex justify-content-center align-items-center"><b>Popular groups</b></h1>
+
+
+    <!-- popular groups -->
+
+    <div class="container my-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="./music.jpg" class="card-img-top" alt="..." style="width: 322px; height: 250px;">
+            <div class="card-body">
+              <h5 class="card-title " style="text-align: center;">
+                <a href="/views/group.html" style="color: black;   text-decoration: none">Lower Makefield Township
+                  Pickleball Meetup</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./tech.jfif" class="card-img-top" alt="..." style="width: 322px; height: 250px;">
+            <div class="card-body">
+              <h5 class="card-title " style="text-align: center;">
+                <a href="/views/group.html" style="color: black;   text-decoration: none"> Shorewalkers: Members Only
+                  Group</a>
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./MOUNTAIN TREKKING.jpg" class="card-img-top" alt="..." style="width: 322px; height: 250px;">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">
+                <a href="group.html" style="color: black;   text-decoration: none"> Sarasota Over 50 Meetup Group
+                </a>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+      <footer>
+        <div class="row my-5 justify-content-center py-5">
+          <div class="col-11">
+            <div class="row ">
+              <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                <img src="./Free_Sample_By_Wix.jpg" alt="" style="height: 100px; height: 100px;">
+                <!-- <h3 class="text-muted mb-md-0 mb-5 bold-text">UpMeet.</h3> -->
+              </div>
+              <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                <ul class="list-unstyled">
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Blog</li>
+                  <li>Portfolio</li>
+                </ul>
+              </div>
+              <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                <p class="mb-1">605, RATAN ICON BUILDING</p>
+                <p>SEAWOODS SECTOR</p>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook"
+                      aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square"
+                      aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter"
+                      aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram"
+                      aria-hidden="true"></i></span> </p><small class="rights">
+                  <span>&#170;</span> UpMeet All Rights Reserved.</small>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--  -->
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
