@@ -1,0 +1,126 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <form action="index" method="GET"> <img src="./public/Free.jpg" alt="" width="70px"></form>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index" style="color: white;"> <b>Home</b>
+              <span class="sr-only"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/about" style="color: white;"><b>About </b> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact" style="color: white;"><b>Contact Us</b></a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <% if(!currentUser){ %> 
+          <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal"
+            type="button">Login</button>
+          <button class="btn btn-success mx-3" data-bs-toggle="modal" data-bs-target="#signupModal"
+            type="button">Signup</button>
+          <% } else{%> 
+          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#logoutModal"
+            type="button">Logout</button>
+          <% } %> 
+        </form>
+      </div>
+    </div>
+  </nav>
+
+        <!-- login modal  Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModaLabel1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModal">Login to UpMeet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="/login" method='POST' id="loginmodal" class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name='username'
+                      required>
+                  </div>
+  
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name='password' required>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+            </div>
+            </form>
+  
+          </div>
+        </div>
+  
+        <!-- signup Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Signup to UpMeet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="/makeusr" method="POST" id="signmodal" class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name='user[username]'
+                      required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail2" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+                      name='user[email]' required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword2" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" name='user[password]' required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword3" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword3" name='confirmpassword'
+                      required>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Signup</button>
+               </form>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- logout modal  Modal -->
+        <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logModaLabel1" aria-hidden="true">
+          <div class="modal-dialog">
+            <form action="/logout" method='POST' id="logoutmodal" class="needs-validation" novalidate>
+              <div class="modal-content">
+  
+                <div class="modal-header">
+                  <h5 class="modal-title" id="loginModal">Do you want to logout?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+  
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-danger">Logout</button>
+                </div>
+              </div>
+            </form>
+  
+          </div>
+        </div>
