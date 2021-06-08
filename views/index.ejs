@@ -175,39 +175,43 @@
 
         <!-- form -->
         <div class="form ">
-          <form class="form-inline d-flex justify-content-center needs-validation" novalidate>
-            <div class="dropdown mx-5">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Choose a Category
-              </a>
+          <form class="form-inline d-flex justify-content-center needs-validation" novalidate action="/search"
+            method="GET">
 
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Arts</button>
-                <button class="dropdown-item" type="button">Adventure</button>
-                <button class="dropdown-item" type="button">Painting</button>
-              </div>
-            </div>
-            <div class="dropdown mx-5">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Choose a Location
-              </a>
 
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Pune</button>
-                <button class="dropdown-item" type="button">Delhi</button>
-                <button class="dropdown-item" type="button">Mumbai</button>
-              </div>
-            </div>
+            <label for="exampleInputPassword1" class="form-label">Choose Your Interest</label>
+
+            <select class="form-select" aria-label="Default select example" name='interest' required>
+              <option selected="true" disabled="disabled"></option>
+              <option value="Arts">Arts</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Painting">Painting</option>
+              <option value="Science">Science</option>
+              <option value="HR">HR</option>
+              <option value="Coding">Coding</option>
+              <option value="Dance">Dance</option>
+              <option value="Book Clubs">Book Clubs</option>
+              <option value="Food">Food</option>
+            </select>
+
+
+
+            <label for="exampleInputPassword1" class="form-label">Browse Location</label>
+
+            <select class="form-select" aria-label="Default select example" name='location' required>
+              <option value="Pune">Pune</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+            </select>
+
+
+            <button class="btn " aria-disabled="true" type='submit'>Search</button>
+
+
           </form>
         </div>
 
-        <!-- button -->
-        <div class="search d-flex justify-content-center">
-          <a class="btn btn-success btn-lg enabled mx-1" style="width: 20%;" tabindex="-1" role="button"
-            aria-disabled="true"> Search </a>
-        </div>
+
 
         <!-- divider -->
         <hr class="featurette-divider my-5">

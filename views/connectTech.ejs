@@ -31,49 +31,37 @@
 
 
     <!-- Groups -->
-    <div class="btn-group mx-5 my-5" role="group" aria-label="Button group with nested dropdown">
+    <form action='/search' method="GET">
+      <div class="btn-group mx-5 my-5" role="group" aria-label="Button group with nested dropdown">
 
 
-      <div class="dropdown mx-5">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Choose a Category
-        </a>
+        <div class="dropdown mx-5">
+          <label for="exampleInputPassword1" class="form-label">Choose Your Interest</label>
 
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">Coding</button>
-          <button class="dropdown-item" type="button">Science</button>
-          <button class="dropdown-item" type="button">HR</button>
+          <select class="form-select" aria-label="Default select example" name='interest' required>
+
+            <option value="Science">Science</option>
+            <option value="HR">HR</option>
+            <option value="Coding">Coding</option>
+          </select>
+        </div>
+        <div class="dropdown mx-2">
+          <label for="exampleInputPassword1" class="form-label">Browse Location</label>
+
+          <select class="form-select" aria-label="Default select example" name='location' required>
+
+            <option value="Pune">Pune</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+
+
+
+          <button class="btn " aria-disabled="true" type='submit'>Search</button>
+
         </div>
       </div>
-      <div class="dropdown mx-1">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Choose a Location
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">Pune</button>
-          <button class="dropdown-item" type="button">Delhi</button>
-          <button class="dropdown-item" type="button">Mumbai</button>
-        </div>
-      </div>
-      <div class="dropdown mx-5">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Connect over tech
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">Science</button>
-          <button class="dropdown-item" type="button">HR</button>
-          <button class="dropdown-item" type="button">Coding</button>
-        </div>
-      </div>
-      <a href="createGrp" class="btn btn-secondary mx-2" tabindex="-1" role="button" aria-disabled="true">Create a
-        group</a>
-
-    </div>
+    </form>
 
 
 
@@ -81,41 +69,40 @@
     <hr class="featurette-divider">
 
     <!-- cards -->
-    <div class="card mb-3 my-5" style="max-width: 90%; height: 400px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="./card1.jpg" alt="..." style="max-width: 100%;height: 400px;">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h2 class="card-title">New York Strategic HR Analytics Meetup</h2>
-            <p class="card-text">We are a group of HR professionals, passionate about applying analytics to the world of
-              work and people management, geeks at heart, softies about anything data, and deeply caring about making
-              both people and enterprises thrive.
-
-              <br> We are also on Slack. To join us there sign-up at: <br><a
-                href=" https://launchpass.com/hranalyticsny"
-                style="text-decoration: none;">https://launchpass.com/hranalyticsny</a>
-            </p>
-            <p class="card-text"><small class="text-muted">Location: Pune <br> 7 member, Private group <br>
-                Organized by :Shivam </small></p>
+    <% for(group of grp){ %>
+      <div class="card mb-3 my-5" style="max-width: 90%; height: 400px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./MOUNTAIN TREKKING.jpg" alt="..." style="max-width: 100%;height: 400px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title"><a href="/group/<%= group._id %> ">
+                  <%= group.groupName %>
+                </a> </h2>
+              <p class="card-text">
+                <%= group.description %>
+              </p>
+              <p class="card-text"><small class="text-muted">Location: <%= group.location %> <br> 7 member, Private
+                    group <br>
+                    Organized by : <%= group.name %> </small></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <hr class="featurette-divider my-5">
+      <% } %>
 
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"></script>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     -->

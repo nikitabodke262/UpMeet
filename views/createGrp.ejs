@@ -35,7 +35,18 @@
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Interest</label>
-                <input type="text" class="form-control" id="Interest" name='group[interest]' required>
+                <select class="form-select" aria-label="Default select example" name='group[interest]' required>
+                    <option selected="true" disabled="disabled"></option>
+                    <option value="Arts">Arts</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Painting">Painting</option>
+                    <option value="Science">Science</option>
+                    <option value="HR">HR</option>
+                    <option value="Coding">Coding</option>
+                    <option value="Dance">Dance</option>
+                    <option value="Book Clubs">Book Clubs</option>
+                    <option value="Food">Food</option>
+                  </select>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Group name</label>
@@ -49,8 +60,11 @@
 
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Location</label>
-                <input type="text" class="form-control" id="Email1" aria-describedby="emailHelp" name='group[location]'
-                    required>
+                <select class="form-select" aria-label="Default select example" name='group[location]' required>
+                    <option value="Pune">Pune</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                  </select>
             </div>
 
             <div class="mb-3 form-check">
