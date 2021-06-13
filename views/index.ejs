@@ -91,13 +91,13 @@
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
                     </div>
                 </div>
 
@@ -110,8 +110,7 @@
                                 <img src="./card1.jpg" alt="" height="220px">
                                 <div class="card-body">
                                     <h5 class="card-title " style="text-align: center; ">
-                                        <a href="friends" style="color: black;  text-decoration: none"><b> Make new
-                                                friends</b></a>
+                                        <a href="friends" style="color: black;  text-decoration: none"><b> Make new friends</b></a>
                                     </h5>
                                 </div>
                             </div>
@@ -121,8 +120,7 @@
                                 <img src="./card2.jpg" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title " style="text-align: center; ">
-                                        <a href="outdoors" style="color: black;  text-decoration: none"><b> Explore
-                                                Outdoors</b></a>
+                                        <a href="outdoors" style="color: black;  text-decoration: none"><b> Explore Outdoors</b></a>
                                     </h5>
                                 </div>
                             </div>
@@ -132,9 +130,8 @@
                                 <img src="./card3.jpg" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title " style="text-align: center; ">
-                                        <a href="connectTech" style="color: black;  text-decoration: none"><b> Connect
-                                                over
-                                                tech</b></a>
+                                        <a href="connectTech" style="color: black;  text-decoration: none"><b> Connect over
+                        tech</b></a>
                                     </h5>
                                 </div>
                             </div>
@@ -164,35 +161,44 @@
                 </div>
 
                 <!-- form -->
-                <div class="form ">
-                    <div class="container justify-content-center">
-                        <form action='/search' method="GET">
-                            <div class="btn-group mx-5 my-5" role="group" aria-label="Button group with nested dropdown">
-                                <div class="dropdown mx-5 px-5">
-                                    <select class="form-select" aria-label="Default select example" name="interest" style="background-color:silver">
-                                        <option selected>Choose a Category</option>
-                                        <option value="1">Arts</option>
-                                        <option value="2">Adventure</option>
-                                        <option value="3">Technology</option>
-                                    </select>
-                                </div>
-                                <div class="dropdown mx-5 px-5">
-                                    <select class="form-select" aria-label="Default select example" name='location' style="background-color:silver;">
-                                        <option selected>Browse Location</option>
-                                        <option value=" 1 ">Pune</option>
-                                        <option value="2 ">Delhi</option>
-                                        <option value="3 ">Mumbai</option>
-                                    </select>
-                                </div>
-                                <!-- </div>
-                            <div class="search justify-content-center"> -->
-                                <button class="btn btn-success mx-5 px-5" aria-disabled="true " type='submit' style="border-radius: 6px; ">Search</button>
-                            </div>
+                <div class="container px-5">
+                    <div class="form ">
+                        <form class="form-inline  justify-content-center needs-validation" novalidate action="/search" method="GET">
+
+
+                            <label for="exampleInputPassword1" class="form-label">Choose Your Interest</label>
+
+                            <select class="form-select" aria-label="Default select example" name='interest' style="background-color: white;" required>
+                <option selected="true" disabled="disabled"></option>
+                <option value="Arts">Arts</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Painting">Painting</option>
+                <option value="Science">Science</option>
+                <option value="HR">HR</option>
+                <option value="Coding">Coding</option>
+                <option value="Dance">Dance</option>
+                <option value="Book Clubs">Book Clubs</option>
+                <option value="Food">Food</option>
+              </select>
+
+
+
+                            <label for="exampleInputPassword1" class="form-label">Browse Location</label>
+
+                            <select class="form-select" aria-label="Default select example" name='location' style="background-color: white;" required>
+                <option selected="true" disabled="disabled"></option>
+                <option value="Pune">Pune</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+              </select>
+
+
+                            <button class="btn btn-primary my-3 px-3 " aria-disabled="true" type='submit'>Search</button>
+
 
                         </form>
                     </div>
                 </div>
-                <!-- button -->
 
 
                 <!-- divider -->
@@ -210,8 +216,7 @@
                                 <img src="./images (1).png" alt="" height="330px">
                                 <div class="card-body">
                                     <a href="friends" style="text-decoration: none;">
-                                        <h5 class="card-title" style="text-align: center; color: black; "><b>Join a
-                                                group</b></h5>
+                                        <h5 class="card-title" style="text-align: center; color: black; "><b>Join a group</b></h5>
                                     </a>
                                     <p class="card-text">Do what you love, meet others who love it, find your community. The rest is history!
                                     </p>
@@ -223,8 +228,7 @@
                                 <img src="./event2.png" alt="">
                                 <div class="card-body">
                                     <a href="friends" style="text-decoration: none;">
-                                        <h5 class="card-title" style="text-align: center; color: black;"><b>Find an
-                                                event</b></h5>
+                                        <h5 class="card-title" style="text-align: center; color: black;"><b>Find an event</b></h5>
                                     </a>
                                     <p class="card-text">Events are happening on just about any topic you can think of, from online gamingto yoga and hiking.
                                     </p>
@@ -237,8 +241,7 @@
                                 <img src="./event.png" alt="">
                                 <div class="card-body">
                                     <a href="createGrp" style="text-decoration: none;">
-                                        <h5 class="card-title" style="text-align: center; color: black;"><b>Start a
-                                                group</b></h5>
+                                        <h5 class="card-title" style="text-align: center; color: black;"><b>Start a group</b></h5>
                                     </a>
                                     <p class="card-text">You don’t have to be an expert to gather people together and explore shared interests.
                                     </p>
@@ -262,9 +265,8 @@
                                 <img src="./music.jpg" class="card-img-top" alt="..." style="width: 322px; height: 250px;">
                                 <div class="card-body">
                                     <h5 class="card-title " style="text-align: center;">
-                                        <a href="group" style="color: black;   text-decoration: none">Lower Makefield
-                                            Township
-                                            Pickleball Meetup</a>
+                                        <a href="group" style="color: black;   text-decoration: none">Lower Makefield Township
+                      Pickleball Meetup</a>
                                     </h5>
                                 </div>
                             </div>
@@ -274,9 +276,8 @@
                                 <img src="./public/tech.jfif" class="card-img-top" alt="..." style="width: 322px; height: 250px;">
                                 <div class="card-body">
                                     <h5 class="card-title " style="text-align: center;">
-                                        <a href="group" style="color: black;   text-decoration: none"> Shorewalkers:
-                                            Members Only
-                                            Group</a>
+                                        <a href="group" style="color: black;   text-decoration: none"> Shorewalkers: Members Only
+                      Group</a>
                                     </h5>
                                 </div>
                             </div>
@@ -286,9 +287,8 @@
                                 <img src="./MOUNTAIN TREKKING.jpg" class="card-img-top" alt="..." style="width: 322px; height: 250px;">
                                 <div class="card-body">
                                     <h5 class="card-title" style="text-align: center;">
-                                        <a href="group" style="color: black;   text-decoration: none"> Sarasota Over 50
-                                            Meetup Group
-                                        </a>
+                                        <a href="group" style="color: black;   text-decoration: none"> Sarasota Over 50 Meetup Group
+                    </a>
                                     </h5>
                                 </div>
                             </div>
@@ -325,12 +325,12 @@
                                 </div>
                                 <div class="row ">
                                     <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
-                                        <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i
-                                                    class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square"
-                                                    aria-hidden="true"></i></span> <span class="mx-2"><i
-                                                    class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span>
-                                        </p><small class="rights">
-                                            <span>&#170;</span> UpMeet All Rights Reserved.</small>
+                                        <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook"
+                          aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square"
+                          aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter"
+                          aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram"
+                          aria-hidden="true"></i></span> </p><small class="rights">
+                      <span>&#170;</span> UpMeet All Rights Reserved.</small>
                                     </div>
 
                                 </div>

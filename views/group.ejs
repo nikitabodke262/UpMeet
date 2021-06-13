@@ -9,8 +9,7 @@
     <!-- Bootstrap CSS -->
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 
     <title>Document</title>
@@ -19,25 +18,25 @@
     .re {
         margin: 0 0;
     }
-
+    
     .cardsbox {
         margin: 0 8rem;
         margin-top: 25px;
     }
-
+    
     .card-img {
         padding: 40px;
     }
-
+    
     .navbar1 {
         margin: 0 9em;
         ;
     }
-
+    
     .jumbotron {
         margin: 0 8rem;
     }
-
+    
     .dbtn {
         float: right;
     }
@@ -63,12 +62,11 @@
 
 
                     <hr class="re">
-                    <pre class="par mx-1 my-3"
-                        style="text-align: center;">Location: <%= grp.location %>           Members: 100             Organized by: <%=grp.name %></pre>
+                    <pre class="par mx-1 my-3" style="text-align: center;">Location: <%= grp.location %>           Members: 100             Organized by: <%=grp.name %></pre>
                     <!-- <hr class="re"> -->
 
                 </div>
-                <img src="./static/recreATE.jfif" class="card-img" alt="..." style="height: 700px;">
+                <img src="/public/creativity.jpg" class="card-img" alt="..." style="height: 800px; padding: 80px;">
             </div>
 
 
@@ -76,22 +74,19 @@
 
         <nav class="navbar1 navbar-expand-lg navbar-light bg-light my-3">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="#">About</a>
                         <a class="nav-link" href="#">Events</a>
-                        <a class="nav-link" href="#">Members</a>
+                        <a class="nav-link" href="/messages/<%= grp._id %> ">Message</a>
 
-                       
-                            <button class="btn btn-danger mx-3" data-bs-toggle="modal" data-bs-target="#loginModal"
-                                type="button">Join Group</button>
 
-                        
+                        <button class="btn btn-danger mx-3" data-bs-toggle="modal" data-bs-target="#loginModal" type="button">Join Group</button>
+
+
                     </div>
                 </div>
             </div>
@@ -99,16 +94,12 @@
 
         <!-- jumbotron -->
         <div class="jumbotron">
-            <h1 class="display-4">LMT Outdoor Pickelball - Advanced</h1>
-            <p class="lead"> Players at the competitive advanced level only. In fairness to all players, the host may
-                suggest a player attend an alternate session with players of similar ability.</p>
+            <h1 class="display-4">Welcome to the group</h1>
+            <p class="lead"> It's not a hobby to us... It's a lifestyle..</p>
             <hr class="my-4">
-            <p>Doubles play with social distancing practices followed per LMT guidelines.
-
-                Do not attend if you are not feeling well - please keep this event safe for all participants.</p>
+            <p>Persistence. Perfection. Patience. Power. Prioritize your passion. It keeps you sane.</p>
             <p class="lead">
-                <a class="btn btn-primary btn-lg" href="https://meet.google.com/bmz-pqyq-yzh?authuser=0&hl=en"
-                    role="button">Attend</a>
+                <a class="btn btn-primary btn-lg" href="https://meet.google.com/bmz-pqyq-yzh?authuser=0&hl=en" role="button">Attend</a>
             </p>
         </div>
 
@@ -117,9 +108,7 @@
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->
         <!--

@@ -102,14 +102,23 @@ app.get('/index', async (req, res) => {
     res.render('index')
 })
 
+app.get('/search',isLoggedIn , async (req, res) => {
+    const grp = await Group.find({ "location": req.query.location, "interest": req.query.interest });
+    console.log(grp);
+    console.log(req.query);
 
-
-app.get('/friends',isLoggedIn, async (req, res) => {
-    console.log('friends');
-    res.render('friends');
+    res.render('search', { grp });
 })
 
-app.get('/createGrp',isLoggedIn, async (req, res) => {
+
+app.get('/friends', isLoggedIn, async (req, res) => {
+    console.log('friends');
+    const grp = await Group.find($or[{"interest":"Dance"},{"interest":"Book Clubs"},{"interest":"Food"}]);
+
+    res.render('friends', { grp });
+})
+
+app.get('/createGrp', isLoggedIn, async (req, res) => {
     console.log('createGrp');
     res.render('createGrp')
 })
@@ -121,9 +130,12 @@ app.get('/contact', async (req, res) => {
 
 
 
-app.get('/outdoors',isLoggedIn, async (req, res) => {
+app.get('/outdoors', isLoggedIn, async (req, res) => {
     console.log('outdoors');
-    res.render('outdoors');
+    const grp = await Group.find($or[{"interest":"Arts"},{"interest":"Adventure"},{"interest":"Painting"}]);
+
+
+    res.render('outdoors', { grp });
 })
 
 app.get('/about', async (req, res) => {
@@ -131,12 +143,15 @@ app.get('/about', async (req, res) => {
     res.render('about')
 })
 
-app.get('/connectTech',isLoggedIn, async (req, res) => {
+app.get('/connectTech', isLoggedIn, async (req, res) => {
     console.log('connectTech');
-    res.render('connectTech');
+    const grp = await Group.find($or[{"interest":"Science"},{"interest":"HR"},{"interest":"Coding"}]);
+
+
+    res.render('connectTech', { grp });
 })
 
-app.post('/makegroup',isLoggedIn, async (req, res) => {
+app.post('/makegroup', isLoggedIn, async (req, res) => {
     const grp = new Group(req.body.group);
     await grp.save();
     res.redirect(`/group/${grp._id}`);
@@ -151,8 +166,8 @@ app.post('/makeusr', async (req, res) => {
         const registeredUser = await User.register(usr, password);
         console.log(registeredUser);
         req.login(registeredUser, err => {
-            if(err)
-            return next(err);
+            if (err)
+                return next(err);
         })
         req.flash('success', 'Welcome to Upmeet')
         res.redirect('/');
@@ -170,14 +185,14 @@ app.post('/login', passport.authenticate('local', { failureFlash: true, failureR
     res.redirect(redirectUrl);
 })
 
-app.get('/makegrp',isLoggedIn, async (req, res) => {
+app.get('/makegrp', isLoggedIn, async (req, res) => {
     const grp = new Group({ name: 'hk', interest: 'outdoors', groupName: 'hkp', description: 'asdfg', location: 'pune' });
     await grp.save();
     res.send(grp);
 })
 
 
-app.get('/group/:id',isLoggedIn, async (req, res) => {
+app.get('/group/:id', isLoggedIn, async (req, res) => {
     console.log('group');
     const grp = await Group.findById(req.params.id);
     //res.send(grp);
@@ -185,15 +200,15 @@ app.get('/group/:id',isLoggedIn, async (req, res) => {
     res.render('group', { grp });
 })
 
-app.get('/messages/:id',isLoggedIn, async (req, res) => {
+app.get('/messages/:id', isLoggedIn, async (req, res) => {
     console.log('messages');
     const grp = await Group.findById(req.params.id);
-    
+
     console.log(grp);
     res.render('messages', { grp });
 })
 
-app.post('/postmsg/:id',isLoggedIn, async (req, res) => {
+app.post('/postmsg/:id', isLoggedIn, async (req, res) => {
     console.log('message posted');
     const usr = req.user.username;
     const { msg } = req.body;
@@ -208,9 +223,9 @@ app.post('/postmsg/:id',isLoggedIn, async (req, res) => {
     //res.redirect(`/messages/${req.params.id}`);
 })
 
-app.post('/logout',(req,res)=>{
+app.post('/logout', (req, res) => {
     req.logout();
-    req.flash('success',"Logged out Successfully!");
+    req.flash('success', "Logged out Successfully!");
     res.redirect('/');
 })
 

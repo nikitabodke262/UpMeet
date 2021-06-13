@@ -4,23 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>UpMeet</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
     * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
     }
-    
+
     body {
         background: #F8F8F8;
         font-family: 'Roboto', sans-serif;
     }
-    
+
     section.chat__section {
         margin: auto;
         align-self: auto;
@@ -29,21 +31,21 @@
         background: #fff;
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
-    
+
     .brand {
         padding: 20px;
         background: #f1f1f1;
         display: flex;
         align-items: center;
     }
-    
+
     .brand h1 {
         text-transform: uppercase;
         font-size: 20px;
         color: #444;
         margin-left: 10px;
     }
-    
+
     .message__area {
         height: 500px;
         padding: 16px;
@@ -52,7 +54,7 @@
         overflow-y: auto;
         padding-top: 40px;
     }
-    
+
     textarea {
         width: 100%;
         border: none;
@@ -61,7 +63,7 @@
         outline: none;
         background: #FBFBFB;
     }
-    
+
     .message {
         padding: 20px;
         border-radius: 4px;
@@ -69,17 +71,17 @@
         max-width: 300px;
         position: relative;
     }
-    
+
     .incoming {
         background: #8F8BE8;
         color: #fff;
     }
-    
+
     .outgoing {
         background: #e9eafd;
         color: #787986;
     }
-    
+
     .message h4 {
         position: absolute;
         top: -20px;
@@ -104,10 +106,11 @@
                 </div>
                 <% for(msg of grp.msgList) {%>
                     <div class="container">
-                        <label for="name" class="form-label" style="font-weight: 800;">
+                        <label for="name" class="form-label"
+                            style="font-weight: 800;background-color:rgb(252, 238, 221)">
                             <%= msg.userId %>
                         </label>
-                        <p class="message" style="background-color:bisque;">
+                        <p class="message" style="background-color:rgb(255, 211, 211);">
                             <%= msg.messages %>
                         </p>
                     </div>
@@ -116,15 +119,21 @@
                         <div>
                             <div class="input-group mb-3 mt-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Message</span>
-                                <input type="text" class="form-control" style="border-radius: 6px; width: 70%;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                                <button class="btn btn-sucess" type="submit" style="border-radius: 6px; background-color: rgb(32, 172, 32); padding: 13px;">Send</button>
+                                <input type="text" class="form-control" style="border-radius: 6px; width: 70%;"
+                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name = "msg">
+                                <button class="btn btn-sucess" type="submit"
+                                    style="border-radius: 6px; background-color: rgb(133, 224, 133); padding: 13px;">Send</button>
                             </div>
                         </div>
             </section>
         </form>
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+            integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -2,95 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <title>Document</title>
+  <title>Document</title>
 </head>
 <style>
-    .featurette-divider {
-        margin: 0 5rem;
-        margin-top: unset;
-        /* margin-bottom: 30px */
-    }
-    
-    .card {
-        margin: 0 5rem;
-    }
+  .featurette-divider {
+    margin: 0 5rem;
+    margin-top: unset;
+    /* margin-bottom: 30px */
+  }
+
+  .card {
+    margin: 0 5rem;
+  }
 </style>
 
 <body>
-    <%- include('../partials/navbar') %>
+  <%- include('../partials/navbar') %>
 
 
-        <!-- Groups -->
-        <form action='/search' method="GET">
-            <div class="btn-group mx-5 my-5" role="group" aria-label="Button group with nested dropdown">
+    <!-- Groups -->
+    <form action='/search' method="GET">
+      <div class="btn-group mx-5 my-5" role="group" aria-label="Button group with nested dropdown">
 
 
-                <div class="dropdown mx-5">
-                    <select class="form-select" aria-label="Default select example" name="interest" style="background-color:silver">
-          <option selected>Choose a Category</option>
-          <option value="1">Arts</option>
-          <option value="2">Adventure</option>
-          <option value="3">Technology</option>
-      </select>
-                </div>
-                <div class="dropdown mx-2">
-                    <select class="form-select" aria-label="Default select example" name='location' style="background-color:silver;">
-          <option selected>Browse Location</option>
-          <option value=" 1 ">Pune</option>
-          <option value="2 ">Delhi</option>
-          <option value="3 ">Mumbai</option>
-      </select>
-                </div>
+        <div class="dropdown mx-5">
+          <label for="exampleInputPassword1" class="form-label">Choose Your Interest</label>
 
-                <button class="btn btn-success mx-5 " aria-disabled="true " type='submit' style="border-radius: 6px; ">Search</button>
+          <select class="form-select" aria-label="Default select example" name='interest' required>
 
-                <a href="createGrp" class="btn btn-secondary mx-2" tabindex="-1" role="button" aria-disabled="true" style="border-radius: 6px; background-color:silver; color: black; border: none;">Create a
-            group</a>
-
-            </div>
-        </form>
-
-
-
-        <!-- divider -->
-        <hr class="featurette-divider">
-
-        <!-- cards -->
-        <div class="card mb-3 my-5" style="max-width: 80%; height: 330px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="./card1.jpg" alt="..." style="max-width: 100%;height: 330px;">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h2 class="card-title">New York Strategic HR Analytics Meetup</h2>
-                        <p class="card-text">We are a group of HR professionals, passionate about applying analytics to the world of work and people management, geeks at heart, softies about anything data, and deeply caring about making both people and enterprises thrive.
-
-                            <br> We are also on Slack. To join us there sign-up at: <br><a href=" https://launchpass.com/hranalyticsny" style="text-decoration: none;">https://launchpass.com/hranalyticsny</a>
-                        </p>
-                        <p class="card-text"><small class="text-muted">Location: Pune <br> 7 member, Private group <br>
-                Organized by :Shivam </small></p>
-                    </div>
-                </div>
-            </div>
+            <option value="Science">Science</option>
+            <option value="HR">HR</option>
+            <option value="Coding">Coding</option>
+          </select>
         </div>
-        <hr class="featurette-divider my-5">
+        <div class="dropdown mx-2">
+          <label for="exampleInputPassword1" class="form-label">Browse Location</label>
+
+          <select class="form-select" aria-label="Default select example" name='location' required>
+
+            <option value="Pune">Pune</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+
+
+
+          <button class="btn " aria-disabled="true" type='submit'>Search</button>
+
+        </div>
+      </div>
+    </form>
+
+
+
+    <!-- divider -->
+    <hr class="featurette-divider">
+
+    <!-- cards -->
+    <% for(group of grp){ %>
+      <div class="card mb-3 my-5" style="max-width: 90%; height: 400px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./MOUNTAIN TREKKING.jpg" alt="..." style="max-width: 100%;height: 400px;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title"><a href="/group/<%= group._id %> ">
+                  <%= group.groupName %>
+                </a> </h2>
+              <p class="card-text">
+                <%= group.description %>
+              </p>
+              <p class="card-text"><small class="text-muted">Location: <%= group.location %> <br> 7 member, Private
+                    group <br>
+                    Organized by : <%= group.name %> </small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
 
 
 
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->
         <!--
